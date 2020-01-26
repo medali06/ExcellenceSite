@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Calculez votre moyenne generale rapidement !." />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://z-p3-scontent-frt3-1.xx.fbcdn.net/v/t1.0-9/66496571_2363902140343018_7489310937061523456_n.png?_nc_cat=100&_nc_eui2=AeH2P7yGZfW8JHB8v-0eNC6hGRCYMEIZpFcmN11ETC8VH8dk4D0yCYxdGAlhHQycta4xKBxCTSed92WPLLwWNxN_xdwZBBAeN90OTMdR-k72vA&_nc_oc=AQnuafYJjhy1TdJHXbTF5wtjgqayaJwHmfUwNNGm-gwsNaQ460FOPrpZp-chHIOzlXg&_nc_ht=z-p3-scontent-frt3-1.xx&oh=a57393c6d17dadf8390f35b693f25367&oe=5E160997" />
+    <title>Outils</title>
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Viga&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../Css/Outils.css" />
+    <script src="../Js/Outils.js"></script>
+
+</head>
+<body>
+
+     <nav class="menu">
+        <div id="logo"> <a href="Home.html" title="Aller à la page principale"><span>Excel</span>lence1K</a></div>
+        <ul id="rmenu">
+            <li><a class="menu-item" href="7Students.htm">#7 étudiants</a> </li>
+            <li><a class="menu-item" href="Horaire.htm">Horaires</a> </li>
+            <li><a class="menu-item" href="Excercices.html">Éxcercices</a>  </li>
+            <li><a class="menu-item" href="Outils.html">Outils</a>   </li>
+            <li><a class="menu-item" href="PN & CN.htm">PN & CN</a></li>
+        </ul>
+    </nav>
+
+    <div id="buttons-box">
+        <button class="classes-btn" onclick="show4AS()">4AS</button> 
+        <button class="classes-btn" onclick="show5C()">5C</button>
+        <button class="classes-btn" onclick="show6C()">6C</button>
+    </div>
+
+
+    <div id="content"> <!--Subjects input fields for 4AS -->
+        <table>
+            <div class="contents-caption">Pour 4AS</div>
+            <tr>
+            <td>
+                <h3 class="subject-name">Arabe</h3>
+                <input type="text" placeholder="dev1" id="ar1"><br>
+                <input type="text" placeholder="dev2" id="ar2"><br>
+                <input type="text" placeholder="com1" id="ar3">
+            </td>
+            <td>
+                <h3 class="subject-name">Math</h3>
+                <input type="text" placeholder="dev1" id="mt1"><br>
+                <input type="text" placeholder="dev2" id="mt2"><br>
+                <input type="text" placeholder="com1" id="mt3">
+            </td>
+            <td>
+                <h3 class="subject-name">IR</h3>
+                <input type="text" placeholder="dev1" id="ir1"><br>
+                <input type="text" placeholder="dev2" id="ir2"><br>
+                <input type="text" placeholder="com1" id="ir3">
+            </td>
+            <td>
+                <h3 class="subject-name">Français</h3>
+                <input type="text" placeholder="dev1" id="fr1"><br>
+                <input type="text" placeholder="dev2" id="fr2"><br>
+                <input type="text" placeholder="com1" id="fr3">
+            </td>
+            <td>
+                <h3 class="subject-name">SN</h3>
+                <input type="text" placeholder="dev1" id="sn1"><br>
+                <input type="text" placeholder="dev2" id="sn2"><br>
+                <input type="text" placeholder="com1" id="sn3">
+            </td>
+            </tr>
+            <tr>
+        <td>
+                <h3 class="subject-name">PC</h3>
+                <input type="text" placeholder="dev1" id="pc1"><br>
+                <input type="text" placeholder="dev2" id="pc2"><br>
+                <input type="text" placeholder="com1" id="pc3">
+            </td>
+            <td>
+                <h3 class="subject-name">HG</h3>
+                <input type="text" placeholder="dev1" id="hg1"><br>
+                <input type="text" placeholder="dev2" id="hg2"><br>
+                <input type="text" placeholder="com1" id="hg3">
+            </td>
+            <td>
+                <h3 class="subject-name">IC</h3>
+                <input type="text" placeholder="dev1" id="ic1"><br>
+                <input type="text" placeholder="dev2" id="ic2"><br>
+                <input type="text" placeholder="com1" id="ic3">
+            </td>
+            <td>
+                <h3 class="subject-name">Anglais</h3>
+                <input type="text" placeholder="dev1" id="an1"><br>
+                <input type="text" placeholder="dev2" id="an2"><br>
+                <input type="text" placeholder="com1" id="an3">
+            </td>
+            <td>
+                <h3 class="subject-name">E.P.S</h3>
+                <input type="text" placeholder="dev1" id="eps1"><br>
+                <input type="text" placeholder="dev2" id="eps2"><br>
+                <input type="text" placeholder="com1" id="eps3">
+            </td>
+
+            </tr> 
+        </table>
+    </div>
+
+
+    <br> 
+    <div class="calculate-btn-area">
+        <button id="calculate-btn-male" onclick="calculateMaleRate4AS()">Calculer/m</button>
+        <button id="calculate-btn-female" onclick="calculateFemaleRate4AS()">Calculer/f</button>
+    </div>
+
+    <div id="moyenne"><h2>Moyenne generale</h2></div>
+    <h3 id="rate"></h3> <!--Display general rate -->
+    <table class="cent">
+      <tr>
+        <td><meter id="percentage" ></meter></td> <td><p id="percent"></p> <!--Display general rate percentage-->
+        </td> 
+      </tr>
+    </table>
+    <br><br><br>
+    <br>
+    <div id="footer">
+        <a href="#"><span>Excel</span>lence1</a> &copy; 2019 </a>
+    </div> 
+    <div id="content2"> <!--Subjects input fields for 6C -->
+            <table>
+                <div class="contents-caption">Pour 6C</div>
+                <tr>
+                <td>
+                    <h3 class="subject-name2">Arabe</h3>
+                    <input type="text" placeholder="dev1" id="6C-ar1"><br>
+                    <input type="text" placeholder="dev2" id="6C-ar2"><br>
+                    <input type="text" placeholder="com1" id="6C-ar3">
+                </td>
+                <td>
+                    <h3 class="subject-name2">Math</h3>
+                    <input type="text" placeholder="dev1" id="6C-mt1"><br>
+                    <input type="text" placeholder="dev2" id="6C-mt2"><br>
+                    <input type="text" placeholder="com1" id="6C-mt3">
+                </td>
+                <td>
+                    <h3 class="subject-name2">IR</h3>
+                    <input type="text" placeholder="dev1" id="6C-ir1"><br>
+                    <input type="text" placeholder="dev2" id="6C-ir2"><br>
+                    <input type="text" placeholder="com1" id="6C-ir3">
+                </td>
+                <td>
+                    <h3 class="subject-name2">Français</h3>
+                    <input type="text" placeholder="dev1" id="6C-fr1"><br>
+                    <input type="text" placeholder="dev2" id="6C-fr2"><br>
+                    <input type="text" placeholder="com1" id="6C-fr3">
+                </td>
+                <td>
+                    <h3 class="subject-name2">SN</h3>
+                    <input type="text" placeholder="dev1" id="6C-sn1"><br>
+                    <input type="text" placeholder="dev2" id="6C-sn2"><br>
+                    <input type="text" placeholder="com1" id="6C-sn3">
+                </td>
+                </tr>
+                <tr>
+        <td>
+                    <h3 class="subject-name2">PC</h3>
+                    <input type="text" placeholder="dev1" id="6C-pc1"><br>
+                    <input type="text" placeholder="dev2" id="6C-pc2"><br>
+                    <input type="text" placeholder="com1" id="6C-pc3">
+                </td>
+                <td>
+                    <h3 class="subject-name2">HG</h3>
+                    <input type="text" placeholder="dev1" id="6C-hg1"><br>
+                    <input type="text" placeholder="dev2" id="6C-hg2"><br>
+                    <input type="text" placeholder="com1" id="6C-hg3">
+                </td>
+                <td>
+                    <h3 class="subject-name2">PH</h3>
+                    <input type="text" placeholder="dev1" id="6C-ph1"><br>
+                    <input type="text" placeholder="dev2" id="6C-ph2"><br>
+                    <input type="text" placeholder="com1" id="6C-ph3">
+                </td>
+                <td>
+                    <h3 class="subject-name2">Anglais</h3>
+                    <input type="text" placeholder="dev1" id="6C-an1"><br>
+                    <input type="text" placeholder="dev2" id="6C-an2"><br>
+                    <input type="text" placeholder="com1" id="6C-an3">
+                </td>
+                <td>
+                    <h3 class="subject-name2">E.P.S</h3>
+                    <input type="text" placeholder="dev1" id="6C-eps1"><br>
+                    <input type="text" placeholder="dev2" id="6C-eps2"><br>
+                    <input type="text" placeholder="com1" id="6C-eps3">
+                </td>
+        
+                </tr> 
+            </table>
+        </div>
+        
+        
+        <br> 
+        <div class="calculate-btn-area2">
+            <button id="calculate-btn-male2" onclick="calculateMaleRate6C()">Calculer/m</button>
+            <button id="calculate-btn-female2" onclick="calculateFemaleRate6C()">Calculer/f</button>
+        </div>
+        
+        <div id="moyenne2"><h2>Moyenne generale</h2></div>
+        <h3 id="rate2"></h3> 
+        <table class="cent2">
+            <tr>
+                <td><meter id="percentage2" ></meter></td> <td><p id="percent2"></p> 
+                </td> 
+            </tr>
+        </table>
+        <br><br><br>
+        <br>
+
+
+        <div id="content3"> <!--Subjects input fields for 6C -->
+            <table>
+                <div class="contents-caption">Pour 5C</div>
+                <tr>
+                <td>
+                    <h3 class="subject-name3">Arabe</h3>
+                    <input type="text" placeholder="dev1" id="5C-ar1"><br>
+                    <input type="text" placeholder="dev2" id="5C-ar2"><br>
+                    <input type="text" placeholder="com1" id="5C-ar3">
+                </td>
+                <td>
+                    <h3 class="subject-name3">Math</h3>
+                    <input type="text" placeholder="dev1" id="5C-mt1"><br>
+                    <input type="text" placeholder="dev2" id="5C-mt2"><br>
+                    <input type="text" placeholder="com1" id="5C-mt3">
+                </td>
+                <td>
+                    <h3 class="subject-name3">IR</h3>
+                    <input type="text" placeholder="dev1" id="5C-ir1"><br>
+                    <input type="text" placeholder="dev2" id="5C-ir2"><br>
+                    <input type="text" placeholder="com1" id="5C-ir3">
+                </td>
+                <td>
+                    <h3 class="subject-name3">Français</h3>
+                    <input type="text" placeholder="dev1" id="5C-fr1"><br>
+                    <input type="text" placeholder="dev2" id="5C-fr2"><br>
+                    <input type="text" placeholder="com1" id="5C-fr3">
+                </td>
+                <td>
+                    <h3 class="subject-name3">SN</h3>
+                    <input type="text" placeholder="dev1" id="5C-sn1"><br>
+                    <input type="text" placeholder="dev2" id="5C-sn2"><br>
+                    <input type="text" placeholder="com1" id="5C-sn3">
+                </td>
+                </tr>
+                <tr>
+        <td>
+                    <h3 class="subject-name3">PC</h3>
+                    <input type="text" placeholder="dev1" id="5C-pc1"><br>
+                    <input type="text" placeholder="dev2" id="5C-pc2"><br>
+                    <input type="text" placeholder="com1" id="5C-pc3">
+                </td>
+                <td>
+                    <h3 class="subject-name3">HG</h3>
+                    <input type="text" placeholder="dev1" id="5C-hg1"><br>
+                    <input type="text" placeholder="dev2" id="5C-hg2"><br>
+                    <input type="text" placeholder="com1" id="5C-hg3">
+                </td>
+                <td>
+                    <h3 class="subject-name3">PH</h3>
+                    <input type="text" placeholder="dev1" id="5C-ph1"><br>
+                    <input type="text" placeholder="dev2" id="5C-ph2"><br>
+                    <input type="text" placeholder="com1" id="5C-ph3">
+                </td>
+                <td>
+                    <h3 class="subject-name3">Anglais</h3>
+                    <input type="text" placeholder="dev1" id="5C-an1"><br>
+                    <input type="text" placeholder="dev2" id="5C-an2"><br>
+                    <input type="text" placeholder="com1" id="5C-an3">
+                </td>
+                <td>
+                    <h3 class="subject-name3">IC</h3>
+                    <input type="text" placeholder="dev1" id="5C-ic1"><br>
+                    <input type="text" placeholder="dev2" id="5C-ic2"><br>
+                    <input type="text" placeholder="com1" id="5C-ic3">
+                </td>
+                </tr> 
+              <tr>
+                <td id="fix-subjects">
+                    <h3 class="subject-name3">E.P.S</h3>
+                    <input type="text" placeholder="dev1" ><br>
+                    <input type="text" placeholder="dev2" ><br>
+                    <input type="text" placeholder="com1" >
+                  </td>
+                  <td id="fix-subjects">
+                    <h3 class="subject-name3">E.P.S</h3>
+                    <input type="text" placeholder="dev1" ><br>
+                    <input type="text" placeholder="dev2" ><br>
+                    <input type="text" placeholder="com1" >
+                  </td>
+                  <td>
+                    <h3 class="subject-name3">E.P.S</h3>
+                    <input type="text" placeholder="dev1" id="5C-eps1"><br>
+                    <input type="text" placeholder="dev2" id="5C-eps2"><br>
+                    <input type="text" placeholder="com1" id="5C-eps3">
+                  </td>
+              </tr>
+            </table>
+        </div>
+        
+        
+        <br> 
+        <div class="calculate-btn-area3">
+            <button id="calculate-btn-male3" onclick="calculateMaleRate5C()">Calculer/m</button>
+            <button id="calculate-btn-female3" onclick="calculateFemaleRate5C()">Calculer/f</button>
+        </div>
+        
+        <div id="moyenne3"><h2>Moyenne generale</h2></div>
+        <h3 id="rate3"></h3> 
+        <table class="cent3">
+            <tr>
+                <td><meter id="percentage3" ></meter></td> <td><p id="percent3"></p> 
+                </td> 
+            </tr>
+        </table>
+        <br><br><br>
+        <br>
+        <div id="footer">
+                <a href="#"><span>Excel</span>lence1</a> &copy; 2019 </a>
+        </div>  
+        <script type="text/javascript" src="hello.js"></script>
+</body>
+</html>
